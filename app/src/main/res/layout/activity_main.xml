@@ -9,43 +9,47 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/AddEventButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/AddEventButton"
-            android:text="+"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:text="+" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <Button
+            android:id="@+id/SortByButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/SortByButton"
-            android:text="Sort by:"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="5dp"
-            />
+            android:layout_marginRight="15dp"
+            android:text="Sort by:" />
 
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
 
-        <androidx.recyclerview.widget.RecyclerView>
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
-
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
