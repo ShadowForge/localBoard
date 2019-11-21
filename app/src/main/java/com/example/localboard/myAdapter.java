@@ -7,7 +7,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class myAdapter extends RecyclerView.Adapter {
+
+    List<myViewModel> models;
+
+    public myAdapter(List<myViewModel> models) {
+        this.models = models;
+    }
 
     @NonNull
     @Override
@@ -27,8 +35,8 @@ public class myAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public int getItemViewType(int position) {
-        return R.layout.item_my_itemview;
-
+    public int getItemViewType(final int position) {
+        return R.layout.simpletext;
     }
+
 }
