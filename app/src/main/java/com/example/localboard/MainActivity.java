@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        addButton = findViewById(R.id.AddEventButton);
+        addButton = findViewById(R.id.add_button);
 
         addButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
 
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,EventView.class);
+                Intent intent = new Intent(MainActivity.this, EventView.class);
                 startActivity(intent);
             }
         });
