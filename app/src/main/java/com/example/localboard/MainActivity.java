@@ -14,7 +14,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.localboard.myAdapter;
 
@@ -44,26 +46,43 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
 
 // Request a string response from the provided URL.
-        String url = "http://www.mocky.io/v2/5dd5d3873300006b00f3832b";
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
+        String url = "http://10.0.0.37:3000/myevents?select=title";
+/*
+         JsonObjectRequest jsonObjectRequest =
+                new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        textView.setText("Response: " + response.toString());
+                        textView.setText("Response: " +response.toString());
                     }
-                }, new Response.ErrorListener() {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // TODO: Handle error
-                        textView.setText("That did not work");
-                    }
-                });
+                },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                            textView.setText("Ugh");
+                            }
+                        });
 
 // Add the request to the RequestQueue.
         queue.add(jsonObjectRequest);
+*/
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Display the first 500 characters of the response string.
+                        textView.setText("Response is: "+ response);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                textView.setText("That didn't work!");
+            }
+        });
+
+// Add the request to the RequestQueue.
+        queue.add(stringRequest);
 
         Button button = findViewById(R.id.AddEventButton);
 
