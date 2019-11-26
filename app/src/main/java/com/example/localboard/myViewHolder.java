@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 public class myViewHolder extends RecyclerView.ViewHolder {
     private LinearLayout myLinearLayout;
     private TextView myTextView;
@@ -17,10 +19,21 @@ public class myViewHolder extends RecyclerView.ViewHolder {
         myLinearLayout = itemView.findViewById(R.id.layoutRecycler);
         myImageView = itemView.findViewById(R.id.imageRecycler);
         myTextView = itemView.findViewById(R.id.simple_text);
+
     }
 
-    public void bindData(final myViewModel viewModel) {
-        myTextView.setText(viewModel.getMyText());
+    public void bindData(final EventModel model, final OnItemClickRecyclerListener listener) {
+        Glide.with(this.itemView)
+                .load(model.getImage())
+                .into(myImageView);
+        myTextView.setText(model.getTitle());
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onRecyclerItemClick(model);
+            }
+        });
     }
 
 }

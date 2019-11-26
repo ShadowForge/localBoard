@@ -13,6 +13,7 @@
         android:usesCleartextTraffic="true">
 
         <activity android:name=".EventView"></activity>
+        <activity android:name=".EventViewAdd"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

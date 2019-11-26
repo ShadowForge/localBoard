@@ -11,10 +11,13 @@ import java.util.List;
 
 public class myAdapter extends RecyclerView.Adapter {
 
-    List<myViewModel> models;
+    private final List<EventModel> models;
+    private final OnItemClickRecyclerListener clickListener;
 
-    public myAdapter(List<myViewModel> models) {
+    public myAdapter(List<EventModel> models, OnItemClickRecyclerListener clickListener) {
         this.models = models;
+        this.clickListener = clickListener;
+
     }
 
     @NonNull
@@ -26,7 +29,7 @@ public class myAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ((myViewHolder) holder).bindData(models.get(position));
+        ((myViewHolder) holder).bindData(models.get(position), clickListener);
     }
 
     @Override
