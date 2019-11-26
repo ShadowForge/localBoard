@@ -21,14 +21,15 @@
 
 
         <EditText
+            android:id="@+id/EditTextViewAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/EditTextViewAdd"
-            android:text="Enter the description here."
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:background="@drawable/back"
-            android:padding="10dp"/>
+            android:background="@drawable/textboxborder"
+            android:hint="Enter the description here."
+            android:padding="10dp"
+            android:selectAllOnFocus="true" />
 
         <TextView
             android:layout_width="match_parent"
@@ -37,7 +38,7 @@
             android:id="@+id/linkTextViewAdd"
             android:layout_margin="10dp"
             android:layout_weight="0.5"
-            android:background="@drawable/back"
+            android:background="@drawable/textboxborder"
             android:padding="10dp"/>
 
     </LinearLayout>

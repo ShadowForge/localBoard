@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
 
-
-
-
         recyclerView = findViewById(R.id.recyclerView);
 
 

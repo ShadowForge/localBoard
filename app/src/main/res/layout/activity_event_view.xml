@@ -55,7 +55,7 @@
             android:text="This is a description"
             android:id="@+id/descriptionTextView"
             android:layout_weight="1"
-            android:background="@drawable/back"
+            android:background="@drawable/textboxborder"
             android:padding="10dp"/>
 
         <TextView
@@ -65,7 +65,7 @@
             android:id="@+id/linkTextView"
             android:layout_margin="10dp"
             android:layout_weight="0.5"
-            android:background="@drawable/back"
+            android:background="@drawable/textboxborder"
             android:padding="10dp"/>
 
     </LinearLayout>
