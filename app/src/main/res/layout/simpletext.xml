@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+<LinearLayout
+    android:id="@+id/layoutRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="90dp"
+    android:background="@drawable/back">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageRecycler"
+        android:adjustViewBounds="true"
+        android:maxWidth="60dp"
+        android:maxHeight="60dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/simple_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="15pt"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        tools:text="This is some temp text" />
+</LinearLayout>
+</FrameLayout>

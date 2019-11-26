@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortChoices">
+        <item>Sort By: Newest</item>
+        <item>Sort By: Cost</item>
+        <item>Sort By: Nearest</item>
+        <item>Sort By: Popularity</item>
+        <item>Sort By: Soonest</item>
+    </string-array>
+</resources>
