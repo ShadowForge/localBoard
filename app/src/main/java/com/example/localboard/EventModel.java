@@ -18,7 +18,10 @@ public class EventModel implements Serializable {
     EventModel(int id, String title, String image, String description) {this.id = id; this.title = title; this.image= image;
     this.description = description;}
     EventModel(){}
-
+    EventModel(String description, String link) {
+        this.description = description;
+        this.link = link;
+    }
     public int getId() {return id;}
 
     public String getTitle() {return title;}

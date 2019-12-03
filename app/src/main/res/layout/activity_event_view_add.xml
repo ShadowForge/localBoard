@@ -25,6 +25,7 @@
 
 
         <ImageView
+            android:id="@+id/AddImage"
             android:layout_width="400dp"
             android:layout_height="160dp"
             android:layout_marginLeft="5dp"
@@ -34,7 +35,7 @@
             android:background="@drawable/textboxborder" />
 
         <EditText
-            android:id="@+id/EditTextViewAdd"
+            android:id="@+id/EditViewAddDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
