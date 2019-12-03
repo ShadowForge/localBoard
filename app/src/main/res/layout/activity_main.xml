@@ -16,12 +16,22 @@
         android:id="@+id/layout1">
 
         <Button
+            android:id="@+id/AddEventButton"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/AddEventButton"
             android:text="+"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"/>
+
+
+        <Button
+            android:id="@+id/SavedEventsButton"
+            android:layout_width="118dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Saved" />
 
         <View
             android:layout_width="0dp"
