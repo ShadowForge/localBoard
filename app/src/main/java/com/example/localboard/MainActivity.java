@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         //url = "http://www.mocky.io/v2/5de5c4082e00002b0031fe72";
         //url = "http://www.mocky.io/v2/5de5c4982e0000880031fe74";
         //url = "http://www.mocky.io/v2/5de5c6032e00005d0031fe78";
+        url = "http://98.248.20.28:3000/myevents";
 
 
         // Request a string response from the provided URL.

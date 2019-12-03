@@ -10,9 +10,9 @@ public class EventModel implements Serializable {
     private String image;
     private String link;
     private String address;
-    private int zipCode;
-    private Date time;
-    private float cost;
+    private int zip;
+    private String time;
+    private float price;
     private int popularity;
 
     EventModel(int id, String title, String image, String description) {this.id = id; this.title = title; this.image= image;
@@ -31,11 +31,11 @@ public class EventModel implements Serializable {
 
     public String getAddress() {return address;}
 
-    public int getZipCode() { return zipCode;}
+    public int getZipCode() { return zip;}
 
-    public Date getTime() {return time;}
+    public String getTime() {return time;}
 
-    public float getCost() {return cost;}
+    public float getCost() {return price;}
 
     public int getPopularity() {return popularity;}
 
