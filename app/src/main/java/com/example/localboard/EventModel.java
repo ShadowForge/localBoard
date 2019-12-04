@@ -15,8 +15,6 @@ public class EventModel implements Serializable {
     private float price;
     private int popularity;
 
-    EventModel(int id, String title, String image, String description) {this.id = id; this.title = title; this.image= image;
-    this.description = description;}
     EventModel(){}
 
     public int getId() {return id;}
@@ -38,6 +36,7 @@ public class EventModel implements Serializable {
     public float getCost() {return price;}
 
     public int getPopularity() {return popularity;}
+
 
 
 

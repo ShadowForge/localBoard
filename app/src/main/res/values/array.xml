@@ -7,4 +7,12 @@
         <item>Sort By: Popularity</item>
         <item>Sort By: Soonest</item>
     </string-array>
+
+    <string-array name="sortOrder">
+        <item>&amp;order=id.desc"</item>
+        <item>"&amp;order=price.asc"</item>
+        <item>"&amp;order=zip.desc"</item>
+        <item>"&amp;order=popularity.desc"</item>
+        <item>"&amp;order=time.asc"</item>
+    </string-array>
 </resources>
