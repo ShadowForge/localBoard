@@ -85,7 +85,7 @@ public class EventView extends AppCompatActivity {
         });
 
         title.setText(receivedModel.getTitle());
-        cost.setText(String.valueOf(receivedModel.getCost()));
+        cost.setText("$" + String.valueOf(receivedModel.getCost()));
         time.setText(receivedModel.getTime());
         link.setText(receivedModel.getLink());
         description.setText(receivedModel.getDescription());
