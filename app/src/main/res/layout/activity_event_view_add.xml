@@ -6,32 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".EventViewAdd">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="5">
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="#CC03A9F4"
-            android:text="Add a New Event"
+            android:hint="Add a New Event"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:textSize="13pt" />
+            android:textSize="13pt"
+            android:id="@+id/titleAdd"/>
 
 
-        <ImageView
+        <EditText
             android:layout_width="400dp"
             android:layout_height="160dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1.5"
-            android:background="@drawable/textboxborder" />
+            android:background="@drawable/textboxborder"
+            android:id="@+id/imageAdd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/costAdd"
+                android:hint="Cost"
+                android:layout_weight="1"
+                android:background="@drawable/textboxborder"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:inputType="numberDecimal"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/timeAdd"
+                android:hint="Date"
+                android:layout_weight="1"
+                android:background="@drawable/textboxborder"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:editable="false"/>
+        </LinearLayout>
 
         <EditText
             android:id="@+id/EditTextViewAdd"
@@ -43,6 +82,15 @@
             android:hint="Enter the description here."
             android:padding="10dp"
             android:selectAllOnFocus="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Address goes here."
+                android:id="@+id/addressAdd"
+                android:background="@drawable/textboxborder"
+                android:padding="10dp"/>
 
         <EditText
             android:id="@+id/linkTextViewAdd"
@@ -60,12 +108,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
             android:layout_marginRight="170dp"
-            android:text="Add" />
+            android:text="Add"
+            android:background="@drawable/textboxborder"/>
 
 
-    </LinearLayout>
+        </LinearLayout>
 
-
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
